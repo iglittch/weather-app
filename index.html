@@ -37,25 +37,27 @@
           <input type="submit" value="Search" class="search-button" />
         </form>
         <p>
-          <span class="time">04:39 <small>PM</small> <br /></span>
-          <span class="date">Saturday, 8 October 2023</span>
+          <span class="time"
+            ><span id="time">-:-</span> <small>PM</small> <br
+          /></span>
+          <span class="date" id="current-date">Saturday, 8 October 2023</span>
         </p>
       </div>
 
       <div class="todays-weather">
         <p>
-          <span class="weather-icon">⛅</span>
+          <span class="weather-icon" id="weather-icon">⛅</span>
           <br />
-          <span class="weather-state"> Rainy</span>
+          <span class="weather-state" id="weather-condition">Rainy</span>
           <br />
           <span class="location"
             ><span id="city">--</span>, <span id="country">--</span></span
           >
         </p>
         <p class="weather-details">
-          Humidity: <span>20&#x25;</span>
+          Humidity: <span><span id="humidity">--</span>&#x25;</span>
           <br />
-          Wind: <span>20km/h</span>
+          Wind: <span><span id="wind-speed">--</span>km/h</span>
         </p>
         <h2>
           <span id="temperature">-- </span><small class="metric">&deg;C</small>
