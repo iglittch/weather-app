@@ -10,9 +10,17 @@ small {
   font-size: 11px;
 }
 h2 {
-  margin-top: 0;
+  text-align: center;
+  padding-left: 0;
+  padding: 5px;
+  margin: 0 auto;
   font-size: 35px;
   color: rgb(220, 194, 244);
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(3px);
+  border-radius: 2px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 .search-bar {
   padding: 12px;
@@ -93,7 +101,11 @@ footer {
   font-weight: 50;
 }
 .weather-icon {
-  font-size: 30px;
+  width: 100px;
+  height: 90px;
+  padding: 0;
+  margin: 0;
+  vertical-align: bottom;
 }
 .weather-state {
   font-size: 30px;
@@ -115,4 +127,7 @@ footer {
 .weather-details span {
   font-size: 20px;
   font-weight: 400;
+}
+.current-weather {
+  margin: 0;
 }

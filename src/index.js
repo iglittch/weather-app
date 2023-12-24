@@ -3,7 +3,12 @@ function updateInterface(response) {
   let city = document.querySelector("#city");
   let country = document.querySelector("#country");
   let weatherCondition = document.querySelector("#weather-condition");
-  //let weatherIcon = document.querySelector("#weather-icon");
+  let weatherIcon = document.querySelector("#weather-icon");
+  let icon = `<img
+              class="weather-icon"
+              src=${response.data.condition.icon_url}
+              alt="weather-icon"
+            />`;
   let humidity = document.querySelector("#humidity");
   let windSpeed = document.querySelector("#wind-speed");
   let time = document.querySelector("#time");
@@ -18,7 +23,7 @@ function updateInterface(response) {
   country.innerHTML = response.data.country;
   city.innerHTML = response.data.city;
   weatherCondition.innerHTML = response.data.condition.description;
-  //weatherIcon.src = response.data.condition.icon_url;
+  weatherIcon.innerHTML = icon;
   console.log(response.data);
 }
 
