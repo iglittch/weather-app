@@ -1,0 +1,118 @@
+body {
+  color: white;
+  font-family: "Outfit", sans-serif;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-color: rgb(117, 98, 177);
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/108/209/original/pexels-andrey-grushnikov-707667.jpg?1703372005");
+}
+small {
+  font-size: 11px;
+}
+h2 {
+  margin-top: 0;
+  font-size: 35px;
+  color: rgb(220, 194, 244);
+}
+.search-bar {
+  padding: 12px;
+  width: 300px;
+  background: rgba(94, 84, 171, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(8.5px);
+  -webkit-backdrop-filter: blur(8.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: white;
+}
+::placeholder {
+  color: rgb(255, 255, 255, 0.18);
+}
+.search-button {
+  vertical-align: top;
+  padding: 12px;
+  font-family: "Zilla Slab", serif;
+  background: rgba(94, 84, 171, 0.4);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: white;
+  transition: all ease-in-out 100ms;
+}
+
+.search-button:hover {
+  background: rgba(94, 84, 171, 0.6);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(17.5px);
+  -webkit-backdrop-filter: blur(17.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+a {
+  color: rgb(220, 194, 244);
+  text-decoration: none;
+  margin: 1px;
+  padding: 3px;
+  transition: all ease-in-out 200ms;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 10px;
+}
+a:hover {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 5px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin: 25px;
+  margin-top: 15px;
+}
+.todays-weather {
+  text-align: right;
+}
+footer {
+  display: flex;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  font-size: 12px;
+}
+.date {
+  font-weight: 50;
+}
+.weather-icon {
+  font-size: 30px;
+}
+.weather-state {
+  font-size: 30px;
+  font-weight: 600;
+}
+.location {
+  font-size: 20px;
+  font-weight: 50;
+}
+.metric {
+  font-size: 25px;
+  font-weight: 300;
+}
+.weather-details {
+  font-size: 15px;
+  font-weight: 200;
+  margin-bottom: 6px;
+}
+.weather-details span {
+  font-size: 20px;
+  font-weight: 400;
+}
