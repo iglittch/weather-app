@@ -85,5 +85,43 @@ function updateCity(event) {
   citySearch(searchInput.value);
 }
 
+function displayForecast() {
+  let days = [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday",
+  ];
+  let forecastHTML = "";
+
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+    <div class="row">
+          <div class="column">
+            <div class="forecast-day">${day}</div>
+            <img
+              src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-day.png"
+              alt="weather-icon"
+              class="weather-forecast-icon"
+            />
+
+            <div class="forecast-temps">
+              <span class="forecat-temp-max"> 18&deg; </span>
+              <span style="font-weight: 100">|</span>
+              <span class="forecast-temp-min"> 13&deg; </span>
+            </div>
+          </div>
+        </div>
+  `;
+  });
+  let forecast = document.querySelector("#forecast");
+  forecast.innerHTML = forecastHTML;
+}
+displayForecast();
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", updateCity);

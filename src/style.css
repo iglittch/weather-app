@@ -142,8 +142,9 @@ a:hover {
   margin-bottom: 20px;
 }
 .row {
-  display: flex;
+  display: inline-flex;
   justify-content: space-evenly;
+  padding-right: 12px;
 }
 .weather-forecast {
   margin: 20px 40px;
@@ -151,7 +152,7 @@ a:hover {
   padding: 10px;
 }
 .forecast-day {
-  font-size: 16px;
+  font-size: 13px;
   font-weight: 200;
 }
 .forecat-temp-max {
@@ -164,7 +165,7 @@ a:hover {
 }
 .weather-forecast-icon {
   width: 80px;
-  border: 1px solid rgba(220, 194, 244, 0.39);
+  border: 2px solid rgba(220, 194, 244, 0.39);
   border-radius: 50px;
   margin: 10px;
 }
