@@ -19,7 +19,8 @@ function updateInterface(response) {
   time.innerHTML = formatTime(date);
   windSpeed.innerHTML = response.data.wind.speed;
   humidity.innerHTML = response.data.temperature.humidity;
-  temperature.innerHTML = Math.round(response.data.temperature.current);
+  temperature.innerHTML =
+    Math.round(response.data.temperature.current) + "&deg;";
   country.innerHTML = response.data.country;
   city.innerHTML = response.data.city;
   weatherCondition.innerHTML = response.data.condition.description;
@@ -47,13 +48,13 @@ function formatDate(date) {
   let currentDate = date.getDate();
   let year = date.getFullYear();
   let days = [
+    "Sunday",
     "Monday",
     "Tuesday",
     "Wednesday",
     "Thursday",
     "Friday",
     "Saturday",
-    "Sunday",
   ];
   let months = [
     "January",
@@ -91,42 +92,52 @@ function getForecast(city) {
   let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}`;
   axios.get(apiUrl).then(displayForecast);
 }
-
-function displayForecast(response) {
-  console.log(response.data);
-
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
   let days = [
+    "Sunday",
     "Monday",
     "Tuesday",
     "Wednesday",
     "Thursday",
     "Friday",
     "Saturday",
-    "Sunday",
   ];
+
+  return days[date.getDay()];
+}
+function displayForecast(response) {
+  console.log(response.data);
+
   let forecastHTML = "";
 
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `
+  response.data.daily.forEach(function (day, index) {
+    if (index < 7) {
+      forecastHTML =
+        forecastHTML +
+        `
     <div class="row">
           <div class="column">
-            <div class="forecast-day">${day}</div>
+            <div class="forecast-day">${formatDay(day.time)}</div>
             <img
-              src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-day.png"
+              src="${day.condition.icon_url}"
               alt="weather-icon"
               class="weather-forecast-icon"
             />
 
             <div class="forecast-temps">
-              <span class="forecat-temp-max"> 18&deg; </span>
+              <span class="forecat-temp-max"> ${Math.round(
+                day.temperature.maximum
+              )}&deg; </span>
               <span style="font-weight: 100">|</span>
-              <span class="forecast-temp-min"> 13&deg; </span>
+              <span class="forecast-temp-min"> ${Math.round(
+                day.temperature.minimum
+              )}&deg; </span>
             </div>
           </div>
         </div>
   `;
+    }
   });
   let forecast = document.querySelector("#forecast");
   forecast.innerHTML = forecastHTML;

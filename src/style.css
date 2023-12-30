@@ -9,7 +9,16 @@ body {
 small {
   font-size: 11px;
 }
-h2 {
+
+hr {
+  background-color: rgba(220, 194, 244, 0.39);
+  border: none;
+  height: 1px;
+  width: 800px;
+  margin: 20px auto;
+}
+.temperature {
+  font-weight: 600;
   text-align: center;
   padding-left: 0;
   padding: 5px;
@@ -18,16 +27,9 @@ h2 {
   color: rgb(220, 194, 244);
   background: rgba(255, 255, 255, 0.05);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(3px);
+  backdrop-filter: blur(10px);
   border-radius: 2px;
   border: 1px solid rgba(255, 255, 255, 0.18);
-}
-hr {
-  background-color: rgba(220, 194, 244, 0.39);
-  border: none;
-  height: 1px;
-  width: 800px;
-  margin: 20px auto;
 }
 .search-bar {
   padding: 12px;
@@ -122,7 +124,7 @@ a:hover {
 }
 .metric {
   font-size: 25px;
-  font-weight: 300;
+  font-weight: 200;
 }
 .weather-details {
   font-size: 15px;
